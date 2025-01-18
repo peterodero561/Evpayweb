@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVPay - Login</title>
+    <link rel="stylesheet" href="{{url_for ('static', filename='styles/login.css')}}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">EVPay</h1>
+        </header>
+
+        <main>
+            <section class="form-section">
+                <h2>Login</h2>
+                
+                <form id="login-form">
+
+                <!-- Email Field -->
+                <div class="field">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" class="input-box" placeholder="Enter your email">
+                </div>
+
+                <!-- Password Field -->
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="input-box" placeholder="Enter your password">
+                </div>
+
+                <!-- respnse message-->
+                <div id="response-message" class="message" style="display: none;"></div>
+
+                <!-- Remember Me Checkbox -->
+                <div class="field checkbox-field">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember Me</label>
+                </div>
+
+                <!-- Forgot Password Link -->
+                <div class="forgot-password">
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <!-- Buttons -->
+                <div class="login-buttons">
+                    <button class="btn login-btn">Login</button>
+                    <span>or</span>
+                    <button class="btn create-account-btn" id>Create account</button>
+                </div>
+
+                <!-- Continue with Google Button -->
+                <div class="google-button">
+                    <button class="btn google-login-btn">Continue with Google</button>
+                </div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{url_for('static', filename='scripts/login.js')}}"></script>
+</body>
+</html>

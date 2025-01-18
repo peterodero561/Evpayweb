@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVPay</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <!--<a href="#" class="back-button" onclick="goBack()">&larr;</a>-->
+            <h1 class="title">EVPay</h1>
+        </header>
+        <main>
+            <h2 class="welcome-message">Welcome user</h2>
+            <div class="button-group">
+                <button class="btn" onclick="evOwners()">EV Owners</button>
+                <button class="btn" onclick="evPassengers()">EV Passengers</button>
+                <button class="btn" onclick="evManagers()">EVPay Garage Manager</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{url_for('static', filename='scripts/home.js')}}"></script>
+</body>
+</html>
