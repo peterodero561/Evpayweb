@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garage SetUp</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='/styles/garage_setup.css')}}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Garage SetUp</h1>
+        </header>
+
+        <main>
+            <form id="garage-setup-form">
+                <!-- Garage Name -->
+                <label for="garage-name">Garage Name</label>
+                <input type="text" id="garage-name" name="garage-name" placeholder="Enter garage name" required>
+
+                <!-- Garage Location -->
+                <label for="garage-location">Garage Location</label>
+                <select id="garage-location" name="garage-location" required>
+                    <option value="" disabled selected>Select location</option>
+                    <option value="Nairobi">Nairobi</option>
+                    <option value="Nakuru">Nakuru</option>
+                    <option value="Eldoret">Eldoret</option>
+                </select>
+
+                <!-- Garage Services -->
+                <div class="garage-services">
+                    <p>Services the Garage will be offering</p>
+                    <label><input type="checkbox" id="Services" name="Services" value="charging-battery"> Charging Battery</label>
+                    <label><input type="checkbox" id="Services" name="Services" value="tyre-repair"> Tyre Repair</label>
+                    <label><input type="checkbox" id="Services" name="Services" value="purchase-battery"> Selling New Batteries</label>
+                </div>
+
+                <!-- Finalize Button -->
+                <button type="submit" class="btn green-btn">Finalize</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="{{url_for('static', filename='/scripts/garage_setup.js')}}"></script>
+</body>
+</html>

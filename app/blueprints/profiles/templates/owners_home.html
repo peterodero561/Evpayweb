@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVPay</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/owners_home.css')}}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="#" class="back-button" onclick="goBack()">&larr;</a>
+            <h1 class="title">EVPay Driver</h1>
+        </header>
+        <main>
+            <div class="button-group">
+                <button class="btn" onclick="evpay_account()">My EVPay Account</button>
+                <button class="btn" onclick="battery_charging()">EVPay Battery Charging Payment System</button>
+                <button class="btn" onclick="battery_maintenance()">EVPay Battery Maintenance Payment System</button>
+                <button class="btn">EVPay Charging Point Locator</button>
+                <button class="btn">EVPay EVGarage Locator</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{url_for('static', filename='scripts/owners_home.js')}}"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/profile.css')}}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="#" class="back-button" onclick="goBack()">&larr;</a>
+            <h1 class="title">My Profile</h1>
+        </header>
+
+        <main>
+            <section class="profile-section">
+                <!-- Profile Picture -->
+                <div class="profile-pic"></div>
+
+                <!-- Profile Information -->
+                <div class="profile-info"></div>
+
+                <!-- Bus Information -->
+                 <div class="bus-info"></div>
+
+                <!-- Garage Information -->
+                <div class="garage-info"></div>
+
+                <!-- Edit Fields for Profile Info-->
+                <form class="update-form">
+                <div id="edit-fields" style="display: none;">
+                    <label for="name-input">Name:</label>
+                    <input type="text" id="name-input" required name="name">
+                    <label for="email-input">Email:</label>
+                    <input type="email" id="email-input" required name="email">
+
+                    <label for="new-password">New Password</label>
+                    <input type="password" id="new-password" name="password">
+
+                    <label for="confirm-new-password">Confirm New Password</label>
+                    <input type="password" id="confirm-new-password" name="confirm-new-password">
+
+                    <label for="pic">Profile Picture</label>
+                    <input type="file" name="pic" id="pic">
+                </div>
+                </form>
+
+                <!-- add bus edit form-->
+                 <form id="add-bus-form" style="display: none;">
+                    <label for="plate">Plate Number</label>
+                    <input type="text" id="plate" name="plate">
+
+                    <label for="busModel">Model of Bus</label>
+                    <input type="text" id="model" name="busModel">
+
+                    <label for="batteryModel">Model of Battery</label>
+                    <input type="text" id="batteryModel" name="batteryModel">
+
+                    <label for="batteryCompany">Company of Battery</label>
+                    <input type="text" id="batteryCompany" name="batteryCompany">
+
+                    <label for="busSeats">Bus number of seats</label>
+                    <input type="number" id="busSeats" name="busSeats">
+                 </form>
+
+                <!-- Message to display in update -->
+                <div class="update-message" style="display: none;"></div>
+
+                <!-- Edit and Save Buttons -->
+                <div class="buttons">
+                    <button id="edit-btn" class="btn green-btn">Edit Profile</button>
+                    <button id="save-btn" class="btn green-btn" style="display: none;">Save</button>
+                    <button id="save-bus-btn" class="btn green-btn" style="display: none;">Save Bus</button>
+                    <button id="add-bus-btn" class="btn green-btn" style="display: none;">Add Bus</button>
+                    <button id="edit-bus-btn" class="btn green-btn" style="display: none;">Edit Bus</button>
+                    <button id="save-edit-bus-btn" class="btn green-btn" style="display: none;">Save Bus</button>
+                    <button id="add-garage-btn" class="btn green-btn" style="display: none;">Add Garage</button>
+                    <button id="edit-garage-btn" class="btn green-btn" style="display: none;">Edit Garage</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{url_for('static', filename='scripts/profile.js')}}"></script>
+</body>
+</html>

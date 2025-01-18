@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVPay Battery Charging Maintenance System</title>
+    <link rel="stylesheet" href="../static/styles/battery_maintanance.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="#" class="back-button" onclick="goBack()">&larr;</a>
+            <h1 class="title">EVPay Battery Maintenance Payment System</h1>
+        </header>
+
+        <main>
+            <section class="payment-section">
+                <!-- EV Model Number -->
+                <div class="field">
+                    <label for="ev-model">EV Model Number</label>
+                    <div class="input-box" id="ev-model">23hydv3Hkz</div>
+                </div>
+
+                <!-- Company/Organization -->
+                <div class="field">
+                    <label for="company">Company/Organization</label>
+                    <div class="input-box" id="company">ARCRide</div>
+                </div>
+
+                <!-- Billing Methods -->
+                <div class="field">
+                    <label>Billing Methods</label>
+                    <div class="billing-methods">
+                        <label>
+                            <input type="radio" name="billing" value="mpesa"> M-PESA
+                        </label>
+                        <label>
+                            <input type="radio" name="billing" value="paypal"> PayPal
+                        </label>
+                        <label>
+                            <input type="radio" name="billing" value="debitcard"> Debit Card
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button class="btn send-btn" onclick="sendPayment()">Send</button>
+                    <button class="btn refund-btn" onclick="refundPayment()">Refund</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../static/scripts/battery_maintanance.js"></script>
+</body>
+</html>
