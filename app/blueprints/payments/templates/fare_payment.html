@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVPay Fare Payment Service</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/fare_payment.css')}}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="#" class="back-button" onclick="goBack()">&larr;</a>
+            <h1 class="title">EVPay Fare Payment Service</h1>
+        </header>
+
+        <main>
+            <section class="payment-section">
+                <!-- Seat Number -->
+                <div class="field">
+                    <label for="seat-number">Seat Number</label>
+                    <input type="number" id="seat-number" class="input-box" min="1" value="1">
+                </div>
+
+                <!-- Destination -->
+                <div class="field">
+                    <label for="destination">Destination</label>
+                    <select id="destination" class="input-box" onchange="updatePrice()">
+                        <option value="" disabled selected>Select destination</option>
+                        <option value="multimedia">Multimedia</option>
+                        <option value="downtown">Downtown</option>
+                        <option value="airport">Airport</option>
+                        <option value="cbd">Cbd</option>
+                    </select>
+                </div>
+
+                <!-- Price -->
+                <div class="field">
+                    <label for="price">Price</label>
+                    <div class="input-box" id="price">0.00</div>
+                </div>
+
+                <!-- Billing Methods-->
+                <div class="field">
+                    <label>Billing Methods</label>
+                    <div class="billing-methods">
+                        <label>
+                            <input type="radio" name="billing" value="mpesa"> M-PESA
+                        </label>
+                        <label>
+                            <input type="radio" name="billing" value="paypal"> PayPal
+                        </label>
+                        <label>
+                            <input type="radio" name="billing" value="debitcard"> Debit Card
+                        </label>
+                    </div>
+                </div>
+
+                <!-- credentials -->
+                <div class="field" id="credentials" style="display: none;">
+                    <label for="phone_number">Phone Number</label>
+                    <input type="number" class="input-box" id="phone_number">
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button class="btn send-btn" onclick="sendPayment()">Pay</button>
+                    <!-- <button class="btn refund-btn" onclick="refundPayment()">Refund</button> -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{url_for('static', filename='scripts/fare_payment.js')}}"></script>
+</body>
+</html>

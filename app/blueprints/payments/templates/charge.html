@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charge SetUp</title>
+    <link rel="stylesheet" href="charge.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Charge SetUp</h1>
+        </header>
+
+        <main>
+            <form id="garage-setup-form">
+                <!-- Station Name -->
+                <label for="station-name">Station Name</label>
+                <input type="text" id="station-name" placeholder="Enter station name" required>
+
+                <!-- Station Email Address -->
+                <label for="station-email">Station Email address</label>
+                <input type="email" id="station-email" placeholder="Enter email address" required>
+
+                <!-- Station Location -->
+                <label for="station-location">Station Location</label>
+                <select id="station-location" required>
+                    <option value="">Select a location</option>
+                <option value="location1">Location 1</option>
+                <option value="location2">Location 2</option>
+                <option value="location3">Location 3</option>
+                </select>
+
+                <!-- Create User Password -->
+                <label for="user-password">Create User Password</label>
+                <input type="password" id="user-password" placeholder="Create a password" required>
+
+                <!-- Confirm User Password -->
+                <label for="confirm-password">Confirm User Password</label>
+                <input type="password" id="confirm-password" placeholder="Confirm password" required>
+
+                <!-- Finalize Button -->
+                <button type="submit" class="btn green-btn">Finalize</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="charge.js"></script>
+</body>
+</html>
